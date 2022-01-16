@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息[[${port}]]</title><!--[[${port}]]是thymeleaf第二种语法-->
+    <link rel="icon" th:href="@{/img/favicon.ico}">
+    <script type="text/javascript" th:src="@{/My97DatePicker/WdatePicker.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.4.0.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/index.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<!--下面的readOnly:true 只读不能编写-->
+<div>
+    生日密码 <input type="text" name="beginTime" id="input-beginTime" class="Wdate input-birth" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:false,readOnly:true})" placeholder="开始日期"> ~
+    <input type="text" name="endTime" id="input-endTime" class="Wdate input-birth" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:false,readOnly:true})" placeholder="结束日期">
+    <input type="button" value="查询" id="submit-btn">
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>生日</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<div class="div-img">
+    <img th:src="@{/img/pic1.png}" alt="">
+    <img th:src="@{/img/pic2.png}" alt="">
+</div>
+</body>
+</html>
